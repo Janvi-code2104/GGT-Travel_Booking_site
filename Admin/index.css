@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #E8EDF2;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.75;
+    background: url("beachbackground.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    display: flex;
+    background-color: rgba(247, 247, 243, 0.771);
+    box-shadow: 0 50px 50px -50px darkslategray
+}
+.form-wrapper h2 {
+    color: #1c1c1e;
+    font-size: 2rem;
+    margin: 25px 25px 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+.form-wrapper h3 {
+    color: rgb(27, 1, 5);
+    margin: 10px 0 10px;
+    font-family: cursive;
+}
+.form-wrapper h5 {
+    color: rgb(29, 6, 79);
+    margin: 10px 0 10px;
+    font-family: monospace;
+}
+.form-wrapper form {
+    margin: 25px 0 65px;
+}
+form .myform {
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+}
+.myform input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #1c1c1e;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 10px 0;
+    width: 90%;
+    margin-bottom: 5px;
+    margin-block: 5px;
+}
+.myform input:is(:focus, :valid) {
+    /* padding: 0 20px 0; */
+    padding-left: 10px;
+}
+.myform label {
+    position: absolute;
+    left: 20px;
+    top: 40%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+    font-family: serif;
+}
+.myform input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+    
+}
+form button {
+    width: 90%;
+    padding: 10px 0;
+    font-size: 1rem;
+    background: #00000b;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.1s ease;
+    font-family: serif;
+}
+form button:hover {
+    background-color: #878080;
+}
+ @media (max-width: 740px) {
+    body::before {
+        display: none;
+    }
+
+    .form-wrapper {
+        top: 43%;
+        width: 100%;
+    }
+
+    .form-wrapper form {
+        margin: 25px 0 40px;
+    }
+} 
